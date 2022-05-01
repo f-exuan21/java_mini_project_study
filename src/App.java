@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
+import DTO.Teacher;
+
 public class App {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        TeacherService teacherService = TeacherService.getInstance();
-        StudentService studentService = new StudentService();
         Teacher teacher = null;
 
         while (true) {
