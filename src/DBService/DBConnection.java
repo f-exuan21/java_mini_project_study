@@ -1,5 +1,7 @@
 package DBService;
 
+import Info.DBInfo;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -12,14 +14,14 @@ import java.util.List;
 
 public class DBConnection {
 	
-	private String url = "jdbc:mysql://localhost:3306/web";
-    private String id = "root";
-    private String password = "1234";
+	private String url = DBInfo.url;
+    private String id = DBInfo.user;
+    private String password = DBInfo.password;
     
     Connection conn = null;  // db에 접속
     Statement stmt = null;  // sql 명령어 실행
-    ResultSet rs = null;        // 결과셋 
-    
+    ResultSet rs = null;        // 결과셋
+
     public void connect() {
     	 try {
  	        Class.forName("com.mysql.cj.jdbc.Driver"); //드라이버 로딩
